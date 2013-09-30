@@ -1,0 +1,13 @@
+{
+  "version": "0.0.0",
+  "name": "travis-test",
+  "description": "dafuq travis",
+  "homepage": "https://github.com/WebReflection/travis-test",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/WebReflection/travis-test.git"
+  },
+  "scripts": {
+    "test": "node test.js"
+  }
+}
