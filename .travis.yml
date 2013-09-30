@@ -7,7 +7,8 @@ branches:
   only:
     - master
 before_script:
-  - "sudo apt-get remove sqlite3"
+  - "sudo apt-get remove sqlite3 libsqlite3-dev"
+  - "sync"
   - "export SQLITE_PACKAGE=sqlite-autoconf-3080002"
   - "wget http://www.sqlite.org/2013/$SQLITE_PACKAGE.tar.gz"
   - "tar xvfz $SQLITE_PACKAGE.tar.gz"
@@ -17,4 +18,5 @@ before_script:
   - "sudo make install"
   - "which sqlite3"
   - "sudo apt-get install libsqlite3-dev"
+  - "sync"
   - "sqlite3 --version"
