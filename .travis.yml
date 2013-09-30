@@ -7,10 +7,10 @@ branches:
   only:
     - master
 before_script:
-  - "export SQLITE_PACKAGE=sqlite-autoconf-3080002.tar.gz"
+  - "export SQLITE_PACKAGE=sqlite-autoconf-3080002"
   - "sudo apt-get remove sqlite3"
-  - "wget http://www.sqlite.org/2013/$SQLITE_PACKAGE"
-  - "tar xvfz $SQLITE_PACKAGE"
+  - "wget http://www.sqlite.org/2013/$SQLITE_PACKAGE.tar.gz"
+  - "tar xvfz $SQLITE_PACKAGE.tar.gz"
   - "cd $SQLITE_PACKAGE"
   - "./configure"
   - "make"
