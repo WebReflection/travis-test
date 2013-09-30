@@ -7,10 +7,11 @@ branches:
   only:
     - master
 before_script:
-  - "PACKAGE=sqlite-shell-linux-x86-3080002; wget http://www.sqlite.org/2013/$PACKAGE.zip && sudo unzip -o $PACKAGE -d /usr/local/bin && rm $PACKAGE.zip"
-  - "sudo chmod +x /usr/local/bin/sqlite3"
-  - "which sqlite3"
-  - "sudo apt-get remove sqlite3"
-  - "sudo apt-get install sqlite3"
+  - "wget http://www.sqlite.org/2013/sqlite-autoconf-3080002.tar.gz"
+  - "tar xvfz sqlite-autoconf-3070603.tar.gz"
+  - "cd sqlite-autoconf-3070603"
+  - "./configure"
+  - "make"
+  - "make install"
   - "which sqlite3"
   - "sqlite3 --version"
